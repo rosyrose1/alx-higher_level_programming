@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/**j
+/**
  * check_cycle - Check if a singly linked list contains a loop
  * @list: Pointer to head of a list
  * Return: 1 if there is a cycle, otherwise 0
