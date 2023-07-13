@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 
 def calculator():
@@ -28,3 +27,4 @@ def calculator():
 
 if __name__ == "__main__":
     calculator()
+
