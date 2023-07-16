@@ -1,12 +1,12 @@
-#include <stdio.h>
 #include <Python.h>
+#include <stdio.h>
 
 /**
- * print_python_list_info - prints python list info
- *
- * @p: PyObject
- * Return: no return
+ * print_python_list_info - function prints a python list info
+ * @p: pointr
+ * Return: nothing
  */
+
 void print_python_list_info(PyObject *p)
 {
 	long int size, i;
