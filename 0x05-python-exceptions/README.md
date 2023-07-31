@@ -1,1 +1,1 @@
-python execptions
+python exceptions
