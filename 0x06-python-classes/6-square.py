@@ -1,10 +1,10 @@
-
 #!/usr/bin/python3
-""" Defines a class 'Square."""
+""" Pakage providing a definition of a class 'Square'
+"""
 
 
 class Square():
-    """ Specification of a 'Square'
+    """ Specifies a 'Square'
     """
     def __init__(self, size=0, position=(0, 0)):
         """ Instantiate a 'Square'
@@ -20,7 +20,7 @@ class Square():
 
     @size.setter
     def size(self, size):
-        """ set the size of a square
+        """ Set the size of a square
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -48,12 +48,12 @@ class Square():
         self.__position = position
 
     def area(self):
-        """ Calculate the area of a 'Square'
+        """ Computes the area of a 'Square'
         """
         return self.size ** 2
 
     def my_print(self):
-        """ Display a visual representation of a square
+        """ Displays a visual representation of a square
         """
         if self.size:
             print('\n' * self.position[1], end="")
@@ -62,4 +62,5 @@ class Square():
             ))
         else:
             print()
+
 
