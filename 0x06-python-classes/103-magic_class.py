@@ -1,27 +1,21 @@
 #!/usr/bin/python3
-# 103-magic_calculation.py
-"""Define a MagicClass matching exactly a bytecode provided by Holberton."""
-
+""" Package providing class 'MagicClass' to replicate bytecode for ALX """
 import math
 
 
-class MagicClass:
-    """Represent a circle."""
-
+class MagicClass():
+    """ Declaration of a class to replicate the afformentioned bytecode """
     def __init__(self, radius=0):
-        """Initialize a MagicClass.
-        Arg:
-            radius (float or int): The radius of the new MagicClass.
-        """
+        """ Instantiate a MagicClass object to represent a circle """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
-            raise TypeError("radius must be a number")
+            raise TypeError('radius must be a number')
         self.__radius = radius
 
     def area(self):
-        """Return the area of the MagicClass."""
-        return (self.__radius ** 2 * math.pi)
+        """ Compute the area of a circle """
+        return (self.__radius ** 2) * math.pi
 
     def circumference(self):
-        """Return The circumference of the MagicClass."""
-        return (2 * math.pi * self.__radius
+        """ Compute the circumference of a circle """
+        return 2 * math.pi * self.__radius
