@@ -1,9 +1,10 @@
-""" Defining  a class 'Rectangle' to represent a rectangle
+#!/usr/bin/python3
+""" Define  a class 'Rectangle' to represent a rectangle
 """
 
 
 class Rectangle():
-    """ Declaress of a class to represent a rectangle
+    """ Declaration of a class to represent a rectangle
     """
     def __init__(self, width=0, height=0):
         """ Instantiate a rectangle
@@ -13,13 +14,13 @@ class Rectangle():
 
     @property
     def width(self):
-        """ Obtain the width of a rectangle
+        """ Get the width of a rectangle
         """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ Place the width of a rectangle
+        """ Set the width of a rectangle
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -35,7 +36,7 @@ class Rectangle():
 
     @height.setter
     def height(self, value):
-        """ Place the height of a rectangle
+        """ Set the height of a rectangle
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -44,7 +45,7 @@ class Rectangle():
         self.__height = value
 
     def area(self):
-        """ Obtain the area of a rectangle
+        """ Get the area of a rectangle
         """
         return self.width * self.height
 
@@ -54,6 +55,3 @@ class Rectangle():
         if self.width and self.height:
             return 2 * (self.width + self.height)
         return 0
-
-
-
