@@ -2,8 +2,7 @@
 
 /**
  * print_python_string - Prints information about Python strings.
- * @p: A PyObject string object.
- * Martins alx task
+ * @p: A PyObject string
  */
 void print_python_string(PyObject *p)
 {
