@@ -3,7 +3,6 @@
 """
 
 
-
 def is_same_class(obj, a_class):
     """ Determines whether obj is of type a_class
     """
