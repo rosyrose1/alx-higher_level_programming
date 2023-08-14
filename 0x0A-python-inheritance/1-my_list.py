@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-   Module inherits from list.
+    modules inherit from list
     """
+
 
 class MyList(list):
     """
@@ -9,6 +10,6 @@ class MyList(list):
     """
     def print_sorted(self):
         """
-        Display a List that has been sorted
+        Display a list that has been sorted
         """
         print(sorted(self))
