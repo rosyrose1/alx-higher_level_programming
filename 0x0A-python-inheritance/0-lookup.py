@@ -3,6 +3,6 @@
 """
 
 def lookup(obj):
-    """Obtain a list of attributes and methods belonging to an object.
-    """
-    return dir(obj)
+"""Obtain a list of attributes and methods belonging to an object.
+"""
+return dir(obj)
