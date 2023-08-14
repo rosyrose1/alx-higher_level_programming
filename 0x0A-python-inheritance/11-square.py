@@ -1,19 +1,25 @@
 #!/usr/bin/python3
+""" Defines a class to represent squares
+"""
+
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """ A class that defines a Square using the Rectangle class. """
+    """ Definies a constant size square
+    """
     def __init__(self, size):
-        """ Method responsible for initializing a Square. """
-        self.integer_validator("size", size)
+        """ Instantiating a square
+        """
+        try:
+            super().__init__(size, size)
+        except TypeError:
+            raise TypeError("size must be an integer")
+        except ValueError:
+            raise ValueError("size must be greater than 0")
         self.__size = size
-        super().__init__(self.__size, self.__size)
-
-    def area(self):
-        """ Method that produces a string containing the area """
-        return super().area()
 
     def __str__(self):
-        """ special method that generates a string suitable for printing """
-        return "[Square] {}/{}".format(self.__size, self.__size)
+        """ Dipict a string representation of a square
+        """
+        return '[Square] {size}/{size}'.format(size=self.__size)
