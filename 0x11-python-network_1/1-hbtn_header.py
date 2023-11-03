@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """A script accepts a URL, sends a request to it
-and then presents the value of the X-Request-Id variable 
+and then presents the value of the X-Request-Id variable
 located in the response header.
 """
 import sys
