@@ -1,31 +1,16 @@
 #!/usr/bin/node
 
 const request = require('request');
-const movieId = process.argv[2];
+const episodeNum = process.argv[2];
+const API_URL = 'https://swapi-api.hbtn.io/api/films/';
 
-if (!movieId || isNaN(movieId)) {
-  console.error('Please provide a valid movie ID as the first argument.');
-  process.exit(1);
-}
-
-const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
-
-request(apiUrl, function (error, response, body) {
-  if (error) {
-    console.error('Error:', error);
-    process.exit(1);
-  }
-
-  if (response.statusCode !== 200) {
-    console.error('Error: Unexpected status code:', response.statusCode);
-    process.exit(1);
-  }
-
-  try {
-    const movieData = JSON.parse(body);
-    console.log('Title:', movieData.title);
-  } catch (parseError) {
-    console.error('Error parsing JSON:', parseError);
-    process.exit(1);
+request(API_URL + episodeNum, function (err, response, body) {
+  if (err) {
+    console.log(err);
+  } else if (response.statusCode === 200) {
+    const responseJSON = JSON.parse(body);
+    console.log(responseJSON.title);
+  } else {
+    console.log('Error code: ' + response.statusCode);
   }
 });
